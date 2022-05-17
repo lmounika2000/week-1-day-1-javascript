@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+    <label for="xValue" id="fName">Enter value for FirstName:</label><br>
+    <input type="text" id="xValue" name="xValue" value=""><br>
+
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var element = document.getElementById("xValue");
+      console.log('Log html by id', element);
+      console.log('Log html inner value by id', element.value);
+    }
+  </script>
+</body>
+
+</html>

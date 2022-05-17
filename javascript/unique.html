@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>
+    <h2>Javascript Arrays</h2>
+    <input type="button" value="Click Me" onclick="myFunction()">
+  </div>
+  <script>
+function myFunction() {
+    const data = [
+        { group: 'A', name: 'SD' },
+        { group: 'B', name: 'FI' },
+        { group: 'A', name: 'MM' },
+        { group: 'B', name: 'CO' }
+      ];
+      console.log('actual values', data);
+      const unique = [...new Set(data.map(item => item.group))]; // [ 'A', 'B']
+      console.log('unique group values', unique);
+    }
+
+</script>
+</body>
+
+</html>

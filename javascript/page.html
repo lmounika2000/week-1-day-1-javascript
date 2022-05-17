@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function myFunction() {
+      var element =  document.getElementById("demo");
+      console.log('Log html by id', element);
+      console.log('Log html inner value by id', element.innerText );
+    }
+  </script>
+  </head>
+  
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+    <p id="demo">0</p>
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+</body>
+
+</html>

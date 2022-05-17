@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>
+    <h2>Javascript Arrays</h2>
+    <input type="button" value="Click Me" onclick="myFunction()">
+  </div>
+  <script>
+function myFunction() {
+  var newarray = [{
+        Email: "test3@gmail.com",
+        ID: "A"
+      }, {
+        Email: "test2@gmail.com",
+        ID: "B"
+      }, {
+        Email: "test3@gmail.com",
+        ID: "A"
+      }, {
+        Email: "test4@gmail.com",
+        ID: "C"
+      }, {
+        Email: "test4@gmail.com",
+        ID: "C"
+      }];
+
+      // Array to keep track of duplicates
+      var uniques = newarray.filter((s => a => !s.has(a.ID) && s.add(a.ID))(new Set));
+
+      console.log('actual values', newarray);
+      console.log('unique object values', uniques);
+
+    }
+
+</script>
+</body>
+
+</html>

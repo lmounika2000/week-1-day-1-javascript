@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>Events</h2>
+    <form>
+      <label for="xValue">OnInput Demo: </label><br>
+      <input type="text" id="xValue" name="xValue" oninput="myInput()"><br>
+      <label id="onInputDemo"></label><br><br>
+
+      <label for="yValue">KeyUp Demo: </label><br>
+      <input type="text" id="yValue" name="yValue" onkeyup="keyUpFunction()"><br><br>
+
+      <label for="zValue">Keypress Demo: </label><br>
+      <input type="text" id="zValue" name="zValue" onkeypress="keyPressFunction(event)"><br><br>
+
+      <label for="aValue">Mouse over Demo: </label><br>
+      <input type="text" id="aValue" name="aValue" onmouseover="mouseOverFunction(this)" onmouseleave="mouseLeaveFunction(this)"><br><br>
+
+      <label for="bValue">FocusOut(blur) Demo: </label><br>
+      <input type="text" id="bValue" name="bValue" onblur="blurFunction(event)"><br><br>
+    </form>
+  </div>
+  <script>
+    function myInput() {
+      var x = document.getElementById("xValue").value;
+      document.getElementById("onInputDemo").innerHTML = "You wrote: " + x;
+    }
+
+    function keyUpFunction() {
+      var x = document.getElementById("yValue");
+      x.value = x.value.toUpperCase();
+    }
+
+    function keyPressFunction(event) {
+      console.log('keyPress', event);
+      alert('You pressed: ' + event.key);
+    }
+
+    function mouseOverFunction(event) {
+      event.style.fontSize = "18px";
+    }
+
+    function mouseLeaveFunction(event) {
+      event.style.fontSize = "12px";
+    }
+
+    function blurFunction(event) {
+      alert('You focused out input text with value: ' + event.target.value);
+    }
+  </script>
+</body>
+
+</html>
+

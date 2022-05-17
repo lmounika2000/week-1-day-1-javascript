@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <h2>JavaScript in Body</h2>
+    <label for="xValue" id="fName">Enter value for FirstName:</label><br>
+    <input type="text" id="xValue" name="xValue" class="someClass" value=""><br>
+
+    <label for="yValue" id="yName">Enter value for LastName:</label><br>
+    <input type="text" id="yValue" name="yValue" class="someClassY" value=""><br>
+
+    <button type="button" onclick="myFunction()">Click to Add</button>
+  </div>
+  <script>
+    function myFunction() {
+      var element = document.getElementsByTagName("input");
+      console.log('Log html list', element);
+      console.log('Log html inner value1', element[0].value);
+      console.log('Log html inner value2', element[1].value);
+    }
+  </script>
+</body>
+
+</html>
+
